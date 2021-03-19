@@ -40,8 +40,29 @@ public class StatsService {
     }
 
     public int calculateMonthsWithLowestAverageValue(int[] amountOfSales) {
+        int average = calculateAverageSales(amountOfSales);
+        int underAverage = 0;
+        int totalMonthsLowAverage = 0;
+        for (int data : amountOfSales){
+            if (data < average){
+                totalMonthsLowAverage++;
+                underAverage = totalMonthsLowAverage;
+            }
+        }
+        return underAverage;
+    }
 
-
+    public int calculateMonthsWithHighestAverageValue(int[] amountOfSales) {
+        int average = calculateAverageSales(amountOfSales);
+        int aboveAverage = 0;
+        int totalMonthsHighAverage = 0;
+        for (int data : amountOfSales){
+            if (data < average){
+                totalMonthsHighAverage++;
+                aboveAverage = totalMonthsHighAverage;
+            }
+        }
+        return  aboveAverage;
     }
 }
 

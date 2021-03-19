@@ -43,10 +43,18 @@ class StatsServiceTest {
 
 
     @Test
-    void monthsWithLowestAverageValue() {
+    void calculateMonthsWithLowestAverageValue() {
         StatsService service = new StatsService();
         int expected = 5;
         int actual = service.calculateMonthsWithLowestAverageValue(amountOfSales);
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    void calculateMonthsWithHighestAverageValue() {
+        StatsService service = new StatsService();
+        int expected = 5;
+        int actual = service.calculateMonthsWithHighestAverageValue(amountOfSales);
         assertEquals(expected,actual);
     }
 }
