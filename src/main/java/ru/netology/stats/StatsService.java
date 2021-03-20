@@ -20,23 +20,31 @@ public class StatsService {
     }
 
     public int calculateMaxSalesMonth(int[] amountOfSales) {
+        int index = 0;
+        int result = 0;
         int currentMax = amountOfSales[0];
         for (int amount : amountOfSales) {
+            index++;
             if (currentMax < amount) {
                 currentMax = amount;
+                result = index;
             }
         }
-        return currentMax;
+        return result;
     }
 
     public int calculateMinSalesMonth(int[] amountOfSales) {
+        int index = 0;
+        int result = 0;
         int currentMin = amountOfSales[0];
         for (int amount : amountOfSales) {
+            index++;
             if (currentMin > amount) {
                 currentMin = amount;
+                result = index;
             }
         }
-        return currentMin;
+        return result;
     }
 
     public int calculateMonthsWithLowestAverageValue(int[] amountOfSales) {

@@ -28,7 +28,7 @@ class StatsServiceTest {
     @Test
     void calculateMaxSalesMonth() {
         StatsService service = new StatsService();
-        int expected = 20;
+        int expected = 6;
         int actual = service.calculateMaxSalesMonth(amountOfSales);
         assertEquals(expected,actual);
     }
@@ -36,7 +36,7 @@ class StatsServiceTest {
     @Test
     void calculateMinSalesMonth() {
         StatsService service = new StatsService();
-        int expected = 7;
+        int expected = 9;
         int actual = service.calculateMinSalesMonth(amountOfSales);
         assertEquals(expected,actual);
     }
