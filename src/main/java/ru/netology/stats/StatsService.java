@@ -23,9 +23,9 @@ public class StatsService {
         int index = 0;
         int result = 0;
         int currentMax = amountOfSales[0];
-        for (int amount : amountOfSales) {
+        for (int amount : amountOfSales){
             index++;
-            if (currentMax < amount) {
+            if (currentMax <= amount) {
                 currentMax = amount;
                 result = index;
             }
@@ -39,7 +39,7 @@ public class StatsService {
         int currentMin = amountOfSales[0];
         for (int amount : amountOfSales) {
             index++;
-            if (currentMin > amount) {
+            if (currentMin >= amount) {
                 currentMin = amount;
                 result = index;
             }

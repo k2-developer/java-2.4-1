@@ -28,7 +28,7 @@ class StatsServiceTest {
     @Test
     void calculateMaxSalesMonth() {
         StatsService service = new StatsService();
-        int expected = 6;
+        int expected = 8;
         int actual = service.calculateMaxSalesMonth(amountOfSales);
         assertEquals(expected,actual);
     }
